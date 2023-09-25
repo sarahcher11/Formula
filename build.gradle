@@ -1,6 +1,8 @@
 plugins {
-    id "java"
+    id 'application'
 }
+
+apply plugin : "java"
 
 group 'L3_INFO'
 version '1.0-SNAPSHOT'
@@ -17,5 +19,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass = 'curve.App'
 }
 
