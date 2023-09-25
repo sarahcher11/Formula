@@ -21,6 +21,7 @@ public class App {
         Runtime runtime = Runtime.getRuntime();
         String[] arguments = {"gnuplot", "-persist"};
         Process process = runtime.exec(arguments);
+
         Writer stream = new OutputStreamWriter(process.getOutputStream());
         writeGnuplotInput(stream, curve);
     }

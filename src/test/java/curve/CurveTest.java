@@ -1,13 +1,12 @@
 package curve;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.*;
 
 import formula.Sum;
 import formula.Variable;
@@ -15,7 +14,7 @@ import formula.Variable;
 public class CurveTest {
 
     @Test
-    public void test() throws IOException {
+    void test() throws IOException {
         Variable variable = new Variable("variable", 0);
         Function function = new Function(new Sum(variable, variable), variable);
         double startValue = -1;
@@ -27,11 +26,11 @@ public class CurveTest {
         writer.close();
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (double value = startValue; value <= endValue; value+=step) {
-            stringBuilder.append(value+" "+2*value+"\n");
+        for (double value = startValue; value <= endValue; value += step) {
+            stringBuilder.append(value).append(" ").append(2 * value).append("\n");
         }
 
-        assertThat(writer.toString(), equalTo(stringBuilder.toString()));
+        assertThat(writer.toString()).isEqualTo(stringBuilder.toString());
     }
 
 }
