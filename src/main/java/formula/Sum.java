@@ -21,6 +21,10 @@ public class Sum implements Formula {
 
     @Override
     public double asValue() {
-        return 0;
+        double sum = 0;
+        for (Formula term : terms) {
+            sum += term.asValue();
+        }
+        return sum;
     }
 }
