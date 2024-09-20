@@ -1,13 +1,13 @@
 package formula;
 
 public class SquareRoot implements Formula{
-    private String formula;
-    public SquareRoot(String formula) {
+    private Formula formula;
+    public SquareRoot(Formula formula) {
         this.formula = formula;
     }
     @Override
     public String asString() {
-        return "";
+        return "√(" + formula.asString() + ")";
     }
 
     @Override
