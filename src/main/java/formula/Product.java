@@ -22,6 +22,10 @@ public class Product implements Formula{
 
     @Override
     public double asValue() {
-        return 0;
+        double product = 1;
+        for (Formula factor : factors) {
+            product *= factor.asValue();
+        }
+        return product;
     }
 }
