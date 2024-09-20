@@ -14,7 +14,7 @@ public class Product extends Operation{
 
     @Override
     protected double initialValue() {
-        return 0;
+        return 1;
     }
 
 
