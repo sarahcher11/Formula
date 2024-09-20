@@ -39,7 +39,13 @@ public class Main {
 
         Formula max = new Maximum(x, y, new Sum(x, y));
         System.out.println(max.asString());       // "max(x, y, (x+y))"
-        System.out.println(max.asValue());        // "6.0"
+        System.out.println(max.asValue());
+        // Création de la variable et de la formule
+        Variable variable = new Variable("variable", 0);
+        Formula formula = new Square(variable);
+
+        // Appel de la méthode pour générer les points
+        generatePoints(formula, variable, -5, 10, 1.5);// "6.0"
     }
     public static void generatePoints(Formula formula, Variable variable, double startValue, double endValue, double step) {
         for (double i = startValue; i <= endValue; i += step) {
