@@ -1,9 +1,14 @@
 package formula;
 
-public class Sum implements Formula {
+public class Sum extends Operation {
     private Formula[] terms;
     public Sum(Formula... terms) {
         this.terms = terms;
+    }
+
+    @Override
+    protected String symbol() {
+        return "+";
     }
 
     @Override
