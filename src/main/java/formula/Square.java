@@ -9,4 +9,9 @@ public class Square implements Formula {
     public String asString() {
         return "";
     }
+
+    @Override
+    public double asValue() {
+        return 0;
+    }
 }

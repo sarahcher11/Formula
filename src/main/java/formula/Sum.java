@@ -8,4 +8,9 @@ public class Sum implements Formula {
     public String asString() {
         return "";
     }
+
+    @Override
+    public double asValue() {
+        return 0;
+    }
 }
