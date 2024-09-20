@@ -9,7 +9,7 @@ public class Square implements Formula {
 
     @Override
     public String asString() {
-        return "";
+        return "( "+ formula.asString()+") ^2";
     }
 
     @Override
