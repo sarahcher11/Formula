@@ -9,7 +9,7 @@ public class Power implements Formula {
     }
     @Override
     public String asString() {
-        return "";
+        return "(" + formula.asString() + ")^" + exponent;
     }
 
     @Override
