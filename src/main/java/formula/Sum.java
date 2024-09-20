@@ -22,12 +22,4 @@ public class Sum extends Operation {
     }
 
 
-    @Override
-    public double asValue() {
-        double sum = 0;
-        for (Formula term : terms) {
-            sum += term.asValue();
-        }
-        return sum;
-    }
 }

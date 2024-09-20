@@ -23,12 +23,5 @@ public class Product extends Operation{
     }
 
 
-    @Override
-    public double asValue() {
-        double product = 1;
-        for (Formula factor : factors) {
-            product *= factor.asValue();
-        }
-        return product;
-    }
+
 }
