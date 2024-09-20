@@ -13,7 +13,7 @@ public class Sum extends Operation {
 
     @Override
     protected double initialValue() {
-        return 0;
+        return  0;
     }
 
 
