@@ -1,5 +1,6 @@
 package formula;
 
 public interface Formula {
-    String asString();
+     String asString();
+    double asValue();
 }

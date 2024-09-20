@@ -8,4 +8,9 @@ public class Variable implements Formula {
         this.variable=variable;
         this.value=i;
     }
+
+    @Override
+    public String asString() {
+        return "";
+    }
 }
