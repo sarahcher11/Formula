@@ -21,6 +21,10 @@ public class Minimum implements Formula{
 
     @Override
     public double asValue() {
-        return 0;
+        double min = formulas[0].asValue();
+        for (Formula formula : formulas) {
+            min = Math.min(min, formula.asValue());
+        }
+        return min;
     }
 }
