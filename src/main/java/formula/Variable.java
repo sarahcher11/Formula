@@ -23,7 +23,7 @@ public class Variable implements Formula {
         this.name = name;
     }
 
-    public void setValue(double value) {
+    public void set(double value) {
         this.value = value;
     }
 }
