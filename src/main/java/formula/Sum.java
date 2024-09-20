@@ -16,6 +16,11 @@ public class Sum extends Operation {
         return  0;
     }
 
+    @Override
+    protected double cumulativeValue(double accumulator, double value) {
+        return 0;
+    }
+
 
     @Override
     public double asValue() {

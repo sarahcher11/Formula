@@ -17,6 +17,11 @@ public class Product extends Operation{
         return 1;
     }
 
+    @Override
+    protected double cumulativeValue(double accumulator, double value) {
+        return 0;
+    }
+
 
     @Override
     public double asValue() {

@@ -22,5 +22,5 @@ public abstract class  Operation implements Formula {
     }
 
       protected abstract double initialValue();
-
+      protected abstract double cumulativeValue(double accumulator, double value);
 }
