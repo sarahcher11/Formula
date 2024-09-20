@@ -8,7 +8,15 @@ public class Minimum implements Formula{
     }
     @Override
     public String asString() {
-        return "";
+        StringBuilder sb = new StringBuilder("min(");
+        for (int i = 0; i < formulas.length; i++) {
+            sb.append(formulas[i].asString());
+            if (i < formulas.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append(")");
+        return sb.toString();
     }
 
     @Override
