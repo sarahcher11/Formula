@@ -1,10 +1,15 @@
 package formula;
 
-public class Product implements Formula{
+public class Product extends Operation{
     private Formula[] factors;
 
     public Product(Formula... factors) {
         this.factors = factors;
+    }
+
+    @Override
+    protected String symbol() {
+        return "*";
     }
 
     @Override
