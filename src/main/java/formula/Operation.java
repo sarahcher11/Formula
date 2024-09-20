@@ -7,4 +7,6 @@ public abstract class  Operation implements Formula {
         this.formulas = formulas;
     }
     protected abstract String symbol();
+
+
 }
