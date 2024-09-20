@@ -8,7 +8,15 @@ public class Sum implements Formula {
 
     @Override
     public String asString() {
-        return "";
+        StringBuilder sb = new StringBuilder("(");
+        for (int i = 0; i < terms.length; i++) {
+            sb.append(terms[i].asString());
+            if (i < terms.length - 1) {
+                sb.append("+");
+            }
+        }
+        sb.append(")");
+        return sb.toString();
     }
 
     @Override
