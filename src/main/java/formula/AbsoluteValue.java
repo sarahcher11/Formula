@@ -9,7 +9,7 @@ public class AbsoluteValue implements Formula {
     }
     @Override
     public String asString() {
-        return "";
+        return "|" + formula.asString() + "|";
     }
 
     @Override
