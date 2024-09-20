@@ -14,6 +14,6 @@ public class Power implements Formula {
 
     @Override
     public double asValue() {
-        return 0;
+        return Math.pow(formula.asValue(), exponent);
     }
 }
