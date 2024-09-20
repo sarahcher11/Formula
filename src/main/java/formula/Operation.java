@@ -21,4 +21,6 @@ public abstract class  Operation implements Formula {
         return sb.toString();
     }
 
+      protected abstract double initialValue();
+
 }
