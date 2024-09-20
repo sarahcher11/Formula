@@ -3,6 +3,8 @@ package formula;
 public class Main {
 
     public static void main(String[] args) {
+
+
         /*Variable x = new Variable("x", 2.5);
         Variable y = new Variable("y", 4);
         Formula formula =
@@ -39,4 +41,13 @@ public class Main {
         System.out.println(max.asString());       // "max(x, y, (x+y))"
         System.out.println(max.asValue());        // "6.0"
     }
+    public static void generatePoints(Formula formula, Variable variable, double startValue, double endValue, double step) {
+        for (double i = startValue; i <= endValue; i += step) {
+            variable.set(i);  // Mise à jour de la valeur de la variable
+            System.out.println("Variable: " + i + " -> Formula Value: " + formula.asValue());
+        }
+    }
+
+
+
 }
