@@ -14,6 +14,6 @@ public class AbsoluteValue implements Formula {
 
     @Override
     public double asValue() {
-        return 0;
+        return Math.abs(formula.asValue());
     }
 }
