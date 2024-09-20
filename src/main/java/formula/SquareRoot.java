@@ -12,6 +12,6 @@ public class SquareRoot implements Formula{
 
     @Override
     public double asValue() {
-        return 0;
+        return Math.sqrt(formula.asValue());
     }
 }
