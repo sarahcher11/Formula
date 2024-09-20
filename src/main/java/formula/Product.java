@@ -19,7 +19,7 @@ public class Product extends Operation{
 
     @Override
     protected double cumulativeValue(double accumulator, double value) {
-        return 0;
+        return accumulator*value;
     }
 
 
