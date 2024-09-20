@@ -21,6 +21,10 @@ public class Maximum implements Formula{
 
     @Override
     public double asValue() {
-        return 0;
+        double max = formulas[0].asValue();
+        for (Formula formula : formulas) {
+            max = Math.max(max, formula.asValue());
+        }
+        return max;
     }
 }
