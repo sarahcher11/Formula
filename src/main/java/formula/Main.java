@@ -10,6 +10,6 @@ public class Main {
         System.out.println(formula.asString()); // "(x+(y*(x+y))"
         System.out.println(formula.asValue()); // "28.5"
         x.set(5);
-        System.out.println(formula.asValue()); // "41.0"
+        System.out.println(formula.asValue());
     }
 }
