@@ -16,6 +16,6 @@ public class Variable implements Formula {
 
     @Override
     public double asValue() {
-        return 0;
+        return value;
     }
 }
