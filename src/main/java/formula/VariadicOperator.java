@@ -1,13 +1,18 @@
 package formula;
 
-public abstract class VariadicOperator implements Formula{
+public abstract class VariadicOperator implements Formula {
 
     protected Formula[] formulas;
 
     public VariadicOperator(Formula[] formulas) {
         this.formulas = formulas;
     }
-
+    // Méthode abstraite pour définir le symbole (à implémenter dans les sous-classes)
+    protected abstract String symbol();
+    // Méthode abstraite pour initialiser la valeur de départ (ex: 0 pour Sum, 1 pour Product)
+    protected abstract double initialValue();
+    // Méthode abstraite pour définir la manière de combiner les valeurs (addition pour Sum, multiplication pour Product)
+    protected abstract double cumulativeValue(double a, double b);
     @Override
     public String asString() {
         StringBuilder sb = new StringBuilder("(");
@@ -19,5 +24,13 @@ public abstract class VariadicOperator implements Formula{
         }
         sb.append(")");
         return sb.toString();
+    }
+    @Override
+    public double asValue() {
+        double result = initialValue();
+        for (Formula formula : formulas) {
+            result = cumulativeValue(result, formula.asValue());
+        }
+        return result;
     }
 }

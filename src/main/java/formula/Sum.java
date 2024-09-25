@@ -1,9 +1,9 @@
 package formula;
 
-public class Sum extends Operation {
-    private Formula[] terms;
+public class Sum extends VariadicOperator  {
     public Sum(Formula... terms) {
-        this.terms = terms;
+        super(terms);
+
     }
 
     @Override

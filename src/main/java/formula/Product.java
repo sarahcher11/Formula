@@ -1,10 +1,10 @@
 package formula;
 
-public class Product extends Operation{
-    private Formula[] factors;
+public class Product extends VariadicOperator{
 
     public Product(Formula... factors) {
-        this.factors = factors;
+        super(factors);
+
     }
 
     @Override
