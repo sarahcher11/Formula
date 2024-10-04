@@ -8,7 +8,7 @@ public class ExtensionFormulaFactory implements AbstractFormulaFactory {
 
     @Override
     public Formula createProduct(Formula... formulas) {
-        return null;
+        return new Sum(formulas);
     }
 
     @Override
