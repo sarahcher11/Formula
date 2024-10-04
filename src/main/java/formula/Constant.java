@@ -2,9 +2,9 @@ package formula;
 
 public class Constant implements Formula{
 
-    int value;
+    private double  value;
 
-    public Constant(int value) {
+    public Constant(double value) {
         this.value = value;
     }
 
