@@ -1,25 +1,18 @@
 package formula;
 
-public class Sum extends VariadicOperator  {
-    public Sum(Formula... terms) {
-        super(terms);
-
-    }
-
+class Sum implements Operator {
     @Override
-    protected String symbol() {
+    public String symbol() {
         return "+";
     }
 
     @Override
-    protected double initialValue() {
-        return  0;
+    public double initialValue() {
+        return 0;
     }
 
     @Override
-    protected double cumulativeValue(double accumulator, double value) {
-        return accumulator+value;
+    public double cumulativeValue(double accumulator, double value) {
+        return accumulator + value;
     }
-
-
 }
