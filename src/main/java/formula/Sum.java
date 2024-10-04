@@ -1,6 +1,10 @@
 package formula;
 
-class Sum implements Operator {
+class Sum extends VariadicOperator {
+    public Sum(Formula[] formulas) {
+        super(formulas);
+    }
+
     @Override
     public String symbol() {
         return "+";
