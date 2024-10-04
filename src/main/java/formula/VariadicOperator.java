@@ -3,12 +3,10 @@ package formula;
 public  class VariadicOperator implements Formula {
 
     private Formula[] formulas;
-    private Operator operator ;
 
-    public VariadicOperator(Operator operator, Formula[] formulas) {
+    public VariadicOperator( Formula[] formulas) {
 
         this.formulas = formulas;
-        this.operator=operator;
     }
     @Override
     public String asString() {

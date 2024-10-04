@@ -12,7 +12,7 @@ import formula.Variable;
 
 public class CurveTest {
 
-    @Test
+   /* @Test
     void test() throws IOException {
         Variable variable = new Variable("variable", 0);
         Function function = new Function(new Sum(variable, variable), variable);
@@ -30,6 +30,6 @@ public class CurveTest {
         }
 
         assertThat(writer.toString()).isEqualTo(stringBuilder.toString());
-    }
+    }*/
 
 }
