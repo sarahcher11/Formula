@@ -13,6 +13,6 @@ public class StrategyFormulaFactory implements AbstractFormulaFactory{
 
     @Override
     public Formula createSum(Formula... formulas) {
-        return null;
+        return new VariadicOperatorStrategy(formulas,new SumStrategy());
     }
 }
