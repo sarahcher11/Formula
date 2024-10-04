@@ -1,8 +1,11 @@
 package formula;
 
-public class Product implements Operator{
+public class Product extends VariadicOperator{
 
 
+    public Product(Formula[] formulas) {
+        super(formulas);
+    }
 
     @Override
     public String symbol() {
