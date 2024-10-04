@@ -15,6 +15,6 @@ public class Constant implements Formula{
 
     @Override
     public double asValue() {
-        return 0;
+        return value;
     }
 }
