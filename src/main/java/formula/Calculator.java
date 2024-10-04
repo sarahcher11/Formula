@@ -15,6 +15,21 @@ public class Calculator {
     }
 
 
+    private void analyzeToken(String token, Deque<Formula> deque) {
+        // Si le token est un opérateur de somme
+        if (token.equals("+")) {
+            analyzeSum(deque);
+        }
+        // Si le token est un opérateur de produit
+        else if (token.equals("*")) {
+            analyzeProduct(deque);
+        }
+        // Si le token est un nombre entier
+        else {
+            analyzeInt(token, deque);
+        }
+    }
+
 
     private void analyzeSum(Deque<Formula> deque) {
         Formula right = deque.pollLast();  // Dépile le dernier élément (opérande droite)
