@@ -8,7 +8,7 @@ public class StrategyFormulaFactory implements AbstractFormulaFactory{
 
     @Override
     public Formula createProduct(Formula... formulas) {
-        return null;
+        return new VariadicOperatorStrategy(formulas,new ProductStrategy());
     }
 
     @Override
