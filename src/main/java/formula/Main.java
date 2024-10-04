@@ -12,7 +12,7 @@ public class Main {
         System.out.println(formula.asString()); // "(x+(y*(x+y))"
         System.out.println(formula.asValue()); // "28.5"
         x.set(5);
-        System.out.println(formula.asValue());*/
+        System.out.println(formula.asValue());
 
         Variable x = new Variable("x", 2);
         Variable y = new Variable("y", 4);
@@ -51,7 +51,7 @@ public class Main {
         for (double i = startValue; i <= endValue; i += step) {
             variable.set(i);  // Mise à jour de la valeur de la variable
             System.out.println("Variable: " + i + " -> Formula Value: " + formula.asValue());
-        }
+        }*/
     }
 
 

@@ -1,24 +1,21 @@
 package formula;
 
-public class Product extends VariadicOperator{
+public class Product implements Operator{
 
-    public Product(Formula... factors) {
-        super(factors);
 
-    }
 
     @Override
-    protected String symbol() {
+    public String symbol() {
         return "*";
     }
 
     @Override
-    protected double initialValue() {
+    public double initialValue() {
         return 1;
     }
 
     @Override
-    protected double cumulativeValue(double accumulator, double value) {
+    public double cumulativeValue(double accumulator, double value) {
         return accumulator*value;
     }
 
