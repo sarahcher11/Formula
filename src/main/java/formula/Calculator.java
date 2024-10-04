@@ -8,13 +8,25 @@ import java.util.Map;
 public class Calculator {
 
 
-    private FormulaFactory factory;
+    private AbstractFormulaFactory factory;
 
-    public Calculator(FormulaFactory factory) {
+    public Calculator(AbstractFormulaFactory factory) {
         this.factory = factory;
     }
 
 
+
+    public Formula analyze(String... tokens) {
+        Deque<Formula> deque = new ArrayDeque<>();  // Utilisation de Deque à la place de Stack
+
+        // Parcours de chaque token et analyse
+        for (String token : tokens) {
+            analyzeToken(token, deque);  // Délègue l'analyse à analyzeToken
+        }
+
+        // La deque doit contenir une seule formule à la fin (le résultat)
+        return deque.pollLast();  // Équivaut à pop() dans Stack
+    }
     private void analyzeToken(String token, Deque<Formula> deque) {
         // Si le token est un opérateur de somme
         if (token.equals("+")) {
