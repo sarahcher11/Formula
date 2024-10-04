@@ -1,6 +1,6 @@
 package formula;
 
-public  class VariadicOperator implements Formula {
+public abstract class VariadicOperator implements Formula {
 
     private Formula[] formulas;
 
@@ -28,4 +28,8 @@ public  class VariadicOperator implements Formula {
         }
         return result;
     }
+
+    protected abstract String symbol();
+    protected  abstract double initialValue();
+    protected  abstract double cumulativeValue(double accumulator , double value );
 }
