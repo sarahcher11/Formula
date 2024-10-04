@@ -10,7 +10,7 @@ public class Constant implements Formula{
 
     @Override
     public String asString() {
-        return "";
+        return String.valueOf(value);
     }
 
     @Override
