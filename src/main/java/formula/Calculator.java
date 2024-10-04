@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Calculator {
 
-    // Map associant chaque symbole d'opérateur à une instance de la stratégie correspondante
+    /*// Map associant chaque symbole d'opérateur à une instance de la stratégie correspondante
     private Map<String, Operator> operatorMap;
 
     public Calculator() {
@@ -51,5 +51,5 @@ public class Calculator {
 
         // Le résultat est l'élément restant dans la deque
         return deque.pollLast().asValue();
-    }
+    }*/
 }
