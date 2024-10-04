@@ -14,7 +14,7 @@ public abstract class VariadicOperator implements Formula {
         for (int i = 0; i < formulas.length; i++) {
             sb.append(formulas[i].asString());
             if (i < formulas.length - 1) {
-                sb.append(operator.symbol());
+                sb.append(symbol());
             }
         }
         sb.append(")");
@@ -22,9 +22,9 @@ public abstract class VariadicOperator implements Formula {
     }
     @Override
     public double asValue() {
-        double result = operator.initialValue();
+        double result = initialValue();
         for (Formula formula : formulas) {
-            result = operator.cumulativeValue(result, formula.asValue());
+            result = cumulativeValue(result, formula.asValue());
         }
         return result;
     }
