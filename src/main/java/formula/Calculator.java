@@ -29,4 +29,14 @@ public class Calculator {
         Formula product = factory.createProduct(left, right);  // Utilise la fabrique pour créer le produit
         deque.addLast(product);  // Ajoute la formule résultante à la fin de la deque
     }
+
+    private void analyzeInt(String token, Deque<Formula> deque) {
+        try {
+            double value = Double.parseDouble(token);  // Conversion du token en double
+            Formula constant = factory.createConstant(value);  // Utilise la fabrique pour créer la constante
+            deque.addLast(constant);  // Ajoute la constante à la fin de la deque
+        } catch (NumberFormatException e) {
+            System.err.println("Token invalide : " + token);  // Gestion d'erreur si le token n'est pas un nombre valide
+        }
+    }
 }
